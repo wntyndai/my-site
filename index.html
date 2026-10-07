@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="码上起步：从一个小任务开始，动手学习 Python、Java 与 VS Code。">
+  <meta name="color-scheme" content="light dark"><title>码上起步 · 交互式编程学习</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23243150'/%3E%3Cpath d='M15 12L7 20l8 8m10-16l8 8-8 8' fill='none' stroke='%23ff956c' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到学习内容</a>
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#learn"><span class="brand-icon">&lt;/&gt;</span><span>码上起步<small>CODE, ONE STEP AT A TIME</small></span></a>
+  <div class="nav-label">我的学习台</div>
+  <nav aria-label="主导航" id="navigation"></nav>
+  <div class="sidebar-course"><label class="nav-label" for="track-select">切换学习路线</label><select id="track-select" aria-label="切换学习路线"><option value="python">Python 入门</option><option value="java">Java 起步</option><option value="numpy">NumPy 数组</option><option value="pandas">Pandas 表格</option><option value="matplotlib">Matplotlib 画图</option><option value="analysis">数据综合实战</option></select><div id="lesson-list"></div></div>
+  <div class="sidebar-bottom"><div class="mini-avatar">你</div><div><strong>按自己的节奏学习</strong><small>每一步，都算数。</small></div></div>
+</aside>
+<div class="shell">
+  <header class="topbar"><button class="icon-button mobile-menu" id="menu-btn" aria-label="打开导航">☰</button><div class="breadcrumb" id="breadcrumb">学习空间 <span>/</span> Python 入门</div><div class="top-actions"><button class="search-trigger" id="search-btn"><span>⌕</span> 搜索知识点或报错 <kbd> / </kbd></button><button class="icon-button" id="theme-btn" aria-label="切换深浅主题">◐</button></div></header>
+  <main id="main" tabindex="-1"></main>
+  <footer>一点点理解，一次次动手。<span>学习记录保存在当前浏览器 · <button class="text-button" id="backup-btn">备份与恢复</button></span></footer>
+</div>
+<dialog id="search-dialog" class="dialog"><div class="dialog-head"><h2>找一个知识点</h2><button class="icon-button" data-close aria-label="关闭搜索">×</button></div><label class="sr-only" for="search-input">搜索课程、术语或报错</label><input id="search-input" type="search" placeholder="试试「循环」「NameError」「解释器」" autocomplete="off"><div id="search-results"></div></dialog>
+<dialog id="utility-dialog" class="dialog"><div class="dialog-head"><h2 id="utility-title"></h2><button class="icon-button" data-close aria-label="关闭对话框">×</button></div><div id="utility-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="main.js"></script>
+</body></html>
